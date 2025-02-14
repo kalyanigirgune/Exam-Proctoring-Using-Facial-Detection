@@ -1,0 +1,407 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-alert {
+    width: 100%; /* Full-width alert */
+    max-width: 500px; /* Maximum width of the alert box */
+    height: 20px; /* Adjusts height based on content */
+    min-height: 50px; /* Minimum height to ensure visibility */
+}
+
+.container {
+    margin: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #6800a3;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4e0078;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.navbar-right a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #8000c2;
+    border-radius: 10px;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 35px;
+    right: 70px;
+    width: 50px;
+    height: 50px;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.how-it-works {
+    width: 75%;
+    background-color: #8200b8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 25px;
+}
+
+.how-it-works h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.how-it-works ol {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.how-it-works img {
+    width: 100%;
+    height: 225;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Interview Section */
+.interview-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    background-color: #8000c2;
+    padding: 20px;
+    border-radius: 10px;
+    height: 25%;
+}
+
+.interview-section select {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.interview-section button {
+    background-color: #ffffff;
+    color: #8000c2;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.interview-section button:hover {
+    background-color: #d1bfff;
+}
+
+/* Eye Discipline Section */
+.eye-discipline {
+    width: 100%;
+    /* margin-top: 30px; */
+    padding: 20px;
+    background-color: #af3edf;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.eye-discipline h3 {
+    font-size: 2 rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.eye-discipline h2{
+    font-size: 1 rem;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.points {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.point {
+    background-color: #4e0078;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 22%;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Left side (How It Works) */
+.how-it-works {
+    width: 35%; /* Takes up more space */
+    background-color: #8200b8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 25px;
+}
+
+/* Right side (Interview Section and Eye Discipline) */
+.right-section {
+    display: flex;
+    align-items: row;
+    width: 65%; /* Takes less space */
+}
+
+.interview-section, .eye-discipline {
+    background-color: #8000c2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.interview-section select,
+.interview-section button {
+    width: 100%; /* Full width */
+}
+
+.eye-discipline {
+    background-color: #8200b8;
+}
+
+/* FAQ Section Styling */
+.faq-section {
+    background-color: #e0ccff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 75%; /* Ensures it takes full width below the other sections */
+    margin-top: 60px; /* Adds space between the FAQ and above sections */
+    margin-left: 50px;
+    text-align: left;
+    height: 500px;
+}
+
+.faq-section h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4f207a;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-question {
+    background-color: #af3edf;
+    color: white;
+    font-size: 18px;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+}
+
+.faq-question.active {
+    background-color: #4f207a; /* Darker when active */
+}
+
+.faq-answer {
+    background-color: #ffffff;
+    color: #333333;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-radius: 0 0 5px 5px;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-answer p {
+    padding: 15px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.faq-question:hover {
+    background-color: #7a3fd9;
+}
+
+/* login style */
+
+
+.login-container,.signup-container {
+    background-color: #6800a3;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box,.signup-box {
+    background-color: #9c4cc6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.login-box h2,.signup-box h2 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.login-input,.signup-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.login-input:focus,.signup-input:focus {
+    outline: none;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.google-btn, .instagram-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 45%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.google-btn {
+    background-color: #7b3cc9;
+}
+
+.instagram-btn {
+    background-color: #7b3cc9;
+}
+
+.signup-text {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.signup-text a {
+    color: white;
+    text-decoration: underline;
+}
+
+.login-btn,.signup-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #7b3cc9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.login-btn:hover,.google-btn:hover,.instagram-btn:hover,.signup-btn:hover {
+    background-color: #59299f;
+}
+
+.social-login i{
+    font-size: 1rem;
+    margin-right: 8px;
+}

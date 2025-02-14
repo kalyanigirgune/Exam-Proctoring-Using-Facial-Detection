@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('./partials/head') %>
+   <title>Profile</title>
+   <style>
+    body {
+        background-color: #8db4d8;
+    }
+    .container {
+        background-color: #d2e2f1;
+        border-radius: 5px;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+    }
+    .profile-img {
+        max-width: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group input[type="file"] {
+        display: none; /* Hide the file input */
+    }
+    .profile-info {
+        margin-top: 20px;
+    }
+    .profile-info h3,
+    .profile-info p {
+        margin: 0;
+    }
+    .profile-info p {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+
+    <div class="container mt-4">
+        <h1>Profile</h1>
+        <div class="text-center">
+            <img src="<%= user.profileImageURL %>" alt="Profile Image" class="profile-img">
+        </div>
+
+        <div class="profile-info text-center">
+            <h3><%= user.fullName %></h3>
+            <p><%= user.email %></p>
+        </div>
+
+        <form action="/user/profile/update" method="POST" enctype="multipart/form-data" class="mt-4">
+            <div class="form-group">
+                <label for="profileImage" id="chooseFileLabel">Upload New Profile Image</label>
+                <input type="file" id="profileImage" name="profileImage">
+            </div>
+            <button type="button" class="btn btn-primary" id="updateProfileImage">Update Profile Image</button>
+            <button type="submit" id="submitButton" style="display: none;">Submit</button> <!-- Hidden submit button -->
+        </form>
+    </div>
+
+    <%- include('./partials/scripts') %>
+    <script>
+        document.getElementById('updateProfileImage').addEventListener('click', function() {
+            document.getElementById('profileImage').click(); // Trigger the file input click
+        });
+
+        document.getElementById('profileImage').addEventListener('change', function() {
+            document.getElementById('submitButton').click(); // Auto-submit form when file is chosen
+        });
+    </script>
+</body>
+</html>

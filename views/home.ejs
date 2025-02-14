@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head')  %>
+    <title>AI Interview Agent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <%- include('./partials/nav') %>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Enhance Your Interview Presence with AI-Powered Eye Discipline Monitoring</h1>
+        <p>Answer domain-specific questions while we track your eye engagement and provide feedback</p>
+        <img src="images/iconmonstr-eye-9.png" alt="Eye Icon" class="eye-icon">
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="how-it-works">
+            <h2>How it works</h2>
+            <ol>
+                <li>Choose Your Domain: Select your area of expertise for tailored text-based interview questions that align with your professional background, ensuring the questions are relevant to your career goals.</li>
+                <li>Start the Interview: Answer questions while AI monitors your eye movements for focus and engagement, providing real-time feedback to help you stay on track and perform your best.</li>
+                <li>Get Your Report: Receive an instant analysis of your eye discipline, including scores and personalized improvement tips, helping you refine your interview skills for future success.</li>
+            </ol>
+            <img src="images/imag1.jpeg" alt="Eye Image">
+        </div>
+
+        <div class="right-section">
+            <div class="interview-section">
+                <select>
+                    <option>---Choose Domain---</option>
+                    <option>Technical</option>
+                    <option>HR</option>
+                    <option>Management</option>
+                </select>
+                <button>Start Interview</button>
+            </div>
+
+            <div class="eye-discipline">
+                <h3>Importance of Eye Discipline in Interviews</h3>
+                <div class="points">
+                    <div class="point">Builds Trust and Confidence</div>
+                    <div class="point">Shows Engagement</div>
+                    <div class="point">Reduces Distraction</div>
+                    <div class="point">Indicates Confidence</div>
+                </div>
+                <!-- FAQ Section (Added Below Start Interview and Eye Discipline Sections) -->
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            How accurate is the eye tracking technology?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Our eye tracking technology is highly accurate, utilizing advanced algorithms to monitor your focus and engagement in real time.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            Can I get detailed feedback on my interview performance?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes! After each interview, you'll receive a detailed report highlighting your strengths and areas for improvement, including personalized tips.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            Is my personal data secure?
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Absolutely. We prioritize your privacy and data security, ensuring that all your information is encrypted and securely stored.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        // JavaScript function to toggle FAQ answers
+        function toggleFAQ(element) {
+            const faqAnswer = element.nextElementSibling;
+            const isActive = faqAnswer.style.maxHeight;
+
+            document.querySelectorAll('.faq-answer').forEach(answer => {
+                answer.style.maxHeight = null;
+            });
+
+            if (!isActive) {
+                faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+            }
+        }
+    </script>
+    <%- include('./partials/scripts')  %>
+</body>
+</html>

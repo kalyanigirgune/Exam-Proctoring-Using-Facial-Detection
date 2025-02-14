@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h2>Sign Up</h2>
+            <form action="/user/signup" method="post">
+                <input type="text"   name="fullName" placeholder="Enter Name" class="signup-input"required>
+                <input type="email" name="email" placeholder="Enter Email" class="signup-input">
+                <input type="password" name="password" placeholder="Enter Password" class="signup-input">
+                
+                <div class="social-login">
+                    <button class="google-btn"><i class="fa-brands fa-google"></i>Google</button>
+                    <button class="instagram-btn"><i class="fab fa-instagram"></i> Instagram</button>
+                </div>
+                
+                <p class="signup-text">Welcome New User!</p>
+                
+                <button class="signup-btn" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

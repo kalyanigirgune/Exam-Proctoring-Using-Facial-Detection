@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')  %>
+</head>
+<body>
+    <div class="container">
+        <%- include('./partials/nav') %>
+
+        <h2>Interview Test</h2>
+        <form id="testForm">
+            <div id="questionsContainer"></div>
+            <button type="submit">Submit Test</button>
+        </form>
+    </div>
+
+    <script>
+        const questions = JSON.parse(decodeURIComponent('<%= questions %>'));
+
+        const questionsContainer = document.getElementById('questionsContainer');
+        questions.forEach((item, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.innerHTML = `
+                <p>${index + 1}. ${item.question}</p>
+                ${item.options.map((option, i) => `
+                    <div>
+                        <input type="radio" name="answer${index}" value="${String.fromCharCode(65 + i)}" required>
+                        <label>${option}</label>
+                    </div>`).join('')}
+            `;
+            questionsContainer.appendChild(questionDiv);
+        });
+
+        document.getElementById('testForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const answers = [];
+            questions.forEach((item, index) => {
+                const selectedOption = document.querySelector(`input[name="answer${index}"]:checked`);
+                answers.push({ domain: item.domain, answer: selectedOption.value });
+            });
+
+            try {
+                const response = await fetch('/api/interview/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ answers }),
+                });
+
+                const data = await response.json();
+                // Redirect to the score page
+                window.location.href = `/score?score=${data.score}`;
+            } catch (error) {
+                console.error('Error submitting answers:', error);
+            }
+        });
+    </script>
+</body>
+</html>
